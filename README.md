@@ -3,6 +3,7 @@ EventManager-Cpp
 
 License
 =======
+This code is licensed under <br />
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 
 Description
