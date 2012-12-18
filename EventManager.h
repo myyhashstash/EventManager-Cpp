@@ -89,6 +89,11 @@ namespace Mage {
         }
         
         void createEvent(string name) {
+			for(vector<EventType>::iterator it = _events.begin(); it != _events.end(); ++it) {
+				EventType e = *it;
+				if(e.name.compare(name) == 0)
+					return;
+			}
             EventType e;
             e.event = new Event();
             e.name = name;
