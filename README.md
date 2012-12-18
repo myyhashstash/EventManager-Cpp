@@ -1,11 +1,6 @@
 EventManager-Cpp
 ================
 
-License
-=======
-This code is licensed under <br />
-DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-
 Description
 ===========
 A C++ based Event Manager
@@ -46,26 +41,11 @@ public:
   }
 };
 
-class C {
-public:
-  void listener() {
-    printf("Listener of C called");
-  }
-  
-  void attachToEvent() {
-    // When testEvent is called the listener method of this class will get called.
-    EventManager *myEventManager = EventManager::Instance();
-    myEventManager->subscribe("testEvent", this, &C::listener);
-  }
-};
-
 int main() {
   A *obj0 = new A;
   B *obj1 = new B;
-  C *obj2 = new C;
   
   obj1->attachToEvent();
-  obj2->attachToEvent();
   obj0->fireEvent();
   
   return 0;
@@ -74,5 +54,9 @@ int main() {
 
 Output
 ======
-<em>Listener of B called<br />
-Listener of C called</em>
+<em>Listener of B called</em>
+
+License
+=======
+This code is licensed under <br />
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
